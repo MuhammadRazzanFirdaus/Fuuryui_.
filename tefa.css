@@ -1,0 +1,72 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap");
+
+body {
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #fceabb, #f8b500);
+  margin: 0;
+}
+.container {
+  text-align: center;
+  color: #8b0000;
+  animation: fadeIn 1s ease-in-out;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.cards {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
+}
+.card {
+  width: 220px;
+  height: 300px;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  transition: transform 0.3s, background 0.3s;
+  cursor: pointer;
+  backdrop-filter: blur(10px);
+  position: relative;
+}
+.card:hover {
+  transform: scale(1.1);
+  background: rgba(255, 0, 0, 0.5);
+}
+.card img {
+  width: 100%;
+  height: 170px;
+  object-fit: cover;
+  border-bottom: 3px solid #8b0000;
+}
+.card h3 {
+  margin: 15px 0;
+  font-size: 20px;
+  color: #8b0000;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+.glow {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.3);
+  top: 0;
+  left: 0;
+  border-radius: 15px;
+  transition: opacity 0.3s;
+}
+.card:hover .glow {
+  opacity: 0.8;
+}
